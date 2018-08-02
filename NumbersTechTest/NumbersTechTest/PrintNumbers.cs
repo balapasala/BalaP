@@ -14,12 +14,11 @@ namespace NumbersTechTest
             {
                 for (int i = 1; i <= maxNumbers; i++)
                 {                 
-                    if (!isPrimeNumberCheck(i))
+                    if (!isPrimeOrCompositeNumberCheck(i))
                     {                     
-                        if (!isCompositeNumberCheck(i))
-                        {
+                       
                             Console.WriteLine(i);
-                        }
+                        
                     }                  
                 }
                 return true;
@@ -87,6 +86,49 @@ namespace NumbersTechTest
                 }
 
                 return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                return false;
+            }
+
+        }
+
+
+        public bool isPrimeOrCompositeNumberCheck(int value)
+        {
+            try
+            {
+                int count = 0;
+                for (int i = 1; i <= value; i++)
+                {
+                    if (value % i == 0)
+                    {
+
+                        count = count + 1;
+                    }
+                    if(count>2)
+                    {
+                        break;
+                    }
+
+                }
+
+                if (count == 2)
+                {
+                    Console.WriteLine("prime");
+                    return true;
+                }
+                else if(count > 2)
+                {
+                    Console.WriteLine("composite");
+                    return true;
+                }
+
+                return false;
+
             }
             catch (Exception ex)
             {

@@ -38,6 +38,17 @@ namespace UnitTestProject
             Assert.AreEqual(blnexpected, blnStatus);
 
         }
+        [TestMethod]
+        public void PrimeandCompositeNumberValidation()
+        {
+
+            bool blnexpected = true;
+            PrintNumbers obj = new PrintNumbers();
+            bool blnStatus = obj.isPrimeOrCompositeNumberCheck(12);
+            //Assert  
+            Assert.AreEqual(blnexpected, blnStatus);
+
+        }
 
     }
 }
