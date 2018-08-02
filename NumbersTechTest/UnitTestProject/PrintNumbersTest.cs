@@ -16,5 +16,15 @@ namespace UnitTestProject
             //Assert  
             Assert.AreEqual(blnexpected, blnStatus);
         }
+
+        [TestMethod]
+        public void  PrimeNumbersvalidation()
+        {
+            bool blnexpected = true;
+            PrintNumbers obj = new PrintNumbers();
+            bool blnStatus = obj.isPrimeNumberCheck(5);
+            //Assert  
+            Assert.AreEqual(blnexpected, blnStatus);
+        }
     }
 }
