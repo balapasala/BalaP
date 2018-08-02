@@ -8,11 +8,11 @@ namespace NumbersTechTest
 {
     public class PrintNumbers
     {
-        public bool DisplayNumber(int maxNumbers)
+        public bool DisplayNumber(int startNumber, int maxNumbers)
         {
             try
             {
-                for (int i = 1; i <= maxNumbers; i++)
+                for (int i = startNumber; i <= maxNumbers; i++)
                 {                 
                     if (!isPrimeOrCompositeNumberCheck(i))
                     {                     

@@ -12,10 +12,11 @@ namespace NumbersTechTest
         {
             try
             {
-                int numbersToPrint = 100;
+                int Startnumber = 1;
+                int EndNumber = 100;
                 //Creating instance for PrintNumbers
                 PrintNumbers objPNumbers = new PrintNumbers();
-                if(!objPNumbers.DisplayNumber(numbersToPrint))
+                if(!objPNumbers.DisplayNumber(Startnumber, EndNumber))
                 {
                     throw new Exception("Error: Unable to print numbers!");
                 }

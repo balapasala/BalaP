@@ -9,9 +9,12 @@ namespace UnitTestProject
         [TestMethod]
         public void DisplayNumbersvalidation()
         {
+
+            int startNumber = 1;
+            int EndNumber = 100;
             bool blnexpected = true;
             PrintNumbers obj = new PrintNumbers();
-            bool blnStatus= obj.DisplayNumber(150);
+            bool blnStatus= obj.DisplayNumber(startNumber, EndNumber);
 
             //Assert  
             Assert.AreEqual(blnexpected, blnStatus);
