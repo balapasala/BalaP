@@ -11,7 +11,7 @@ namespace UnitTestProject
         {
             bool blnexpected = true;
             PrintNumbers obj = new PrintNumbers();
-            bool blnStatus= obj.DisplayNumber(100);
+            bool blnStatus= obj.DisplayNumber(150);
 
             //Assert  
             Assert.AreEqual(blnexpected, blnStatus);
@@ -26,5 +26,18 @@ namespace UnitTestProject
             //Assert  
             Assert.AreEqual(blnexpected, blnStatus);
         }
+
+        [TestMethod]
+        public void CompositeNumberValidation()
+        {
+
+            bool blnexpected = true;
+            PrintNumbers obj = new PrintNumbers();
+            bool blnStatus = obj.isCompositeNumberCheck(9);
+            //Assert  
+            Assert.AreEqual(blnexpected, blnStatus);
+
+        }
+
     }
 }
